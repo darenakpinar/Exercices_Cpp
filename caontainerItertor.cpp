@@ -53,3 +53,30 @@ bool list<Val>::iterator::operator==(iterator const& rhs)const{
 /* default constructo */
 template <typename Val>
 list<Val>::list() : m_front(nullptr), m_back(nullptr){}
+
+template<typename Val>
+typename list<Val>::iterator list<Val>::begin(){
+	return {m_front};
+}
+
+// for (auto it = L.begin(); it != L.end(); ++it){...}
+template<typename Val>
+typename list<Val>::iterator list<Val>::end(){
+	return {nullptr};
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
