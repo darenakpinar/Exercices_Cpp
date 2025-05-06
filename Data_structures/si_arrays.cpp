@@ -65,7 +65,7 @@ int main(){
     s.push(20);
     s.push(30);
     s.display(); // Output : Stack: 30 20 10
-    
+
     s.pop();
     cout << "After pop: ";
     s.display(); // Output : Stack 20 10 

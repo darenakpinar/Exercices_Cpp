@@ -30,7 +30,7 @@ int main(){
 		}else{
 			cout << "Congrutulations! You found the number in " << attempts << " attempts!" << endl;
 		}
-	
+
 	}while (guess != number);
 
 	return 0;
