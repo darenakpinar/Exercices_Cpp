@@ -10,5 +10,6 @@ int main(){
 	std::vector<> s;
 	
 	char chess[8][8];
+	
 
 	
