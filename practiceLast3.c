@@ -1,16 +1,38 @@
 #include <stdio.h>
+#include <math.h>
 
-int main (){
-	int number = 0;
-	int result = 0;
-	int a = 9;
-	int b = 1;
-	for (int i = 9; i>0; i--){
+bool  isPolindrom(int x, int xLength){
+	int original = x;
+	int reversed = 0;
 
-	result = number * 9 + i-1;
-	number += i;
-	number*=10;
-	printf ("%d\n", result);
+	while (x > 0){
+		int digit = x % 10;
+		reversed = reversed * 10 + digit;
+		x /= 10;
 	}
-return 0;
+	if (original == reversed ) return true;
+
+	return false;
+}
+int main(){
+	int n;
+	scanf("%d", &n);
+	
+	if (n < 0){
+		printf("Invalid Input!");
+		return 1;
+	}
+	 int length = 0;
+	 while (n>0){
+		length++;
+		n /=10;
+	 }
+	 
+	if (isPolindrom(n, length) == true){
+		printf("The integer is palindrom!\n");
+	}else{
+		printf("The integer is not palindrom!\n");
+	}
+	
+	return 0;
 }
