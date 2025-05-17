@@ -3,7 +3,14 @@
 #include <vector>
 
 int count (std::vector<int>n &numbers, int n){
-	int countWays = 0;
 
-	ine 
+	if (n== 0) return 1;
+
+	if (n<0)return 0;
+
+	int total_count = 0;
+	for (int t = count(numbers,n-numbers.at(i)){
+		tot_count = tot_count + t;
+	}
+return tot_count;
 }
