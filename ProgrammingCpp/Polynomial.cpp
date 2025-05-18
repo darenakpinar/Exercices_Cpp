@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 class Polynomial{
 	public:
@@ -43,3 +44,40 @@ int Polynomial::at(int exponent)const{
 	}
 	return out_coeff;
 }
+
+void Polynomial::set(int exponent, int coeff){
+	bool found = false;
+	int i = 0;
+	while (i < P.length() && !found){
+		Term el = P.at(i);
+		if (el.exp == exponent){
+			el.coeff = coeff;
+			found = true;
+		}
+	i++
+	}
+	if (!found){
+		Term += {coeff, exponent};
+		P.push_back(t);
+	}
+	return;
+	}
+
+Polynomial Polynomial:diggerentiate (int order) const{
+	if (order == 0){
+		return *this;
+	}else{
+		Polynomial res;
+		for (auto el: P){
+			int new_exp = el.exp - 1;
+			int new_coeff = el.exp * el.coeff;
+			res.set (new_exp, new_coef);
+		}
+	}
+	return res.differentiate(order -1 );
+	}
+}
+
+
+int main(){
+
