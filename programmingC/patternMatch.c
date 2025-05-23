@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int count(int a[], int a_size, int b, int b_size){
+	// a_size = 3
+	int patterns = 0;
+	int start;
+	for (start = 0; start +a_size < = b_size; start++){
+		bool found = true;
+		int i;
+		for (i = 0; i < a_size && found; i++){
+			if (a[start+i] != b[i])found = false;
+
+		}
+		if (found) patterns++;
+	}
+	return patterns;
+
+}
+
