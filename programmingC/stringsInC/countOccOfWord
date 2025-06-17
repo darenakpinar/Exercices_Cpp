@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+int countOcc(string s, string word){
+    bool flag = false;
+    int count = 0;
+    int start = 0;
+    int i = 0;
+    for (i; s[i] != '\0'; i++){
+        if (flag) {
+            count++;
+            i + start;
+        }
+        for (int j = 0; word[j] != '\0'; j++){
+            flag = true;
+            if (s[i+j] != j[i]){
+                flag = false;
+                break;
+            }
+            start ++;
+        }
+    }
+}
+int main(){
+
+    string s = "Hello My Name Is Daren, Daren Is Really One Of The Best Daren";
+
+
+    int totalOcc = countOcc(s, "Daren");
+    printf("%d", totalOcc);
+}
